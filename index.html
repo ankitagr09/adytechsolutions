@@ -97,8 +97,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet" />
-  <!-- Consolidated CSS -->
-  <link href="css/theme.css" rel="stylesheet" />
+
   <link href="css/styles.css" rel="stylesheet" />
 
 </head>
@@ -108,7 +107,7 @@
   <header class="navbar navbar-expand-lg navbar-dark sticky-top ">
     <div class="container p-0">
       <a class="navbar-brand px-2 py-0" href="index.html" aria-label="AdyTechSolutions">
-        <span class="navbar-logo-text text-success fs-4">Ady<span class="text-dark">Tech</span>.</span>
+        <span class="navbar-logo-text  fs-4" style="color: #069494;">Ady<span class="text-dark">Tech</span>.</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -614,14 +613,10 @@
           </div>
         </div>
       </div>
-
-
     </section>
-  </main>
 
-  <!-- Enhanced Footer -->
-  <footer class="enhanced-footer">
-    <div class="container-fluid">
+    <section class="bg-teal p-3">
+      <div class="container  ">
       <!-- Newsletter Section -->
       <div class="newsletter-section text-center  ">
         <div class="row justify-content-center">
@@ -645,7 +640,14 @@
           </div>
         </div>
       </div>
+    </div>
+    </section>
+  </main>
 
+   
+  <!-- Enhanced Footer -->
+  <footer class="enhanced-footer">
+     <div class="container py-5 ">
       <!-- Main Footer Content -->
       <div class="row">
         <!-- Company Info -->
@@ -1000,11 +1002,7 @@
         localStorage.setItem("hasSeenWelcomeModal", "true");
       });
 
-    // Add floating animation to newsletter section
-    const newsletterSection = document.querySelector(".newsletter-section");
-    if (newsletterSection) {
-      newsletterSection.style.animation = "float 6s ease-in-out infinite";
-    }
+    
   </script>
 
 </body>
