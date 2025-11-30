@@ -76,6 +76,111 @@ body{
   }
 }
 
+@keyframes waveFloat {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-30px) translateY(-8px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateX(30px) translateY(12px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translateX(-15px) translateY(-6px) rotate(0.3deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes circleFloat1 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(80px, -40px) scale(1.1);
+  }
+  50% {
+    transform: translate(-60px, 60px) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes circleFloat2 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-100px, 50px) scale(0.95);
+  }
+  66% {
+    transform: translate(70px, -70px) scale(1.15);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes circleFloat3 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  20% {
+    transform: translate(60px, 80px) scale(1.2);
+  }
+  40% {
+    transform: translate(-80px, -40px) scale(0.8);
+  }
+  60% {
+    transform: translate(-40px, 60px) scale(1.1);
+  }
+  80% {
+    transform: translate(90px, -30px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes circleFloat4 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(-120px, -60px) scale(1.1);
+  }
+  50% {
+    transform: translate(100px, 40px) scale(0.85);
+  }
+  75% {
+    transform: translate(-50px, -80px) scale(1.05);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes circleFloat5 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  30% {
+    transform: translate(40px, -90px) scale(0.9);
+  }
+  60% {
+    transform: translate(-90px, 30px) scale(1.2);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
 /* Animation Classes */
 .animate-fade-in {
   animation: fadeInUp 0.8s ease-out;
@@ -251,7 +356,7 @@ body{
    HERO SECTION
    ============================================================ */
 .hero-section {
-  background-image: url("/Images/white.avif");
+  /* background-image: url("/Images/home.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #ffffff;
@@ -276,10 +381,21 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
-  animation: float 6s ease-in-out infinite;
-  opacity: 0.15;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="%23069494" stop-opacity="0.05"/><stop offset="50%" stop-color="%2306c5c5" stop-opacity="0.08"/><stop offset="100%" stop-color="%23069494" stop-opacity="0.05"/></linearGradient></defs><path d="M0,300 Q300,200 600,300 T1200,300 L1200,800 L0,800 Z" fill="url(%23waveGrad)"/><path d="M0,450 Q300,350 600,450 T1200,450 L1200,800 L0,800 Z" fill="url(%23waveGrad)"/></svg>');
+  opacity: 0.6;
   z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="circleGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23069494" stop-opacity="0.25"/><stop offset="100%" stop-color="%2306c5c5" stop-opacity="0.35"/></linearGradient></defs><circle cx="200" cy="200" r="140" fill="none" stroke="url(%23circleGrad1)" stroke-width="4.5"><animateTransform attributeName="transform" type="translate" values="0,0; 80,-40; -60,60; 40,30; 0,0" dur="15s" repeatCount="indefinite"/><animate attributeName="r" values="140;154;126;147;140" dur="15s" repeatCount="indefinite"/></circle><circle cx="600" cy="150" r="180" fill="none" stroke="url(%23circleGrad1)" stroke-width="5"><animateTransform attributeName="transform" type="translate" values="0,0; -100,50; 70,-70; 0,0" dur="18s" repeatCount="indefinite"/><animate attributeName="r" values="180;171;198;162;180" dur="18s" repeatCount="indefinite"/></circle><circle cx="900" cy="400" r="120" fill="none" stroke="url(%23circleGrad1)" stroke-width="4"><animateTransform attributeName="transform" type="translate" values="0,0; 60,80; -80,-40; -40,60; 90,-30; 0,0" dur="20s" repeatCount="indefinite"/><animate attributeName="r" values="120;144;96;132;108;120" dur="20s" repeatCount="indefinite"/></circle><circle cx="300" cy="500" r="160" fill="none" stroke="url(%23circleGrad1)" stroke-width="4.5"><animateTransform attributeName="transform" type="translate" values="0,0; -120,-60; 100,40; -50,-80; 0,0" dur="22s" repeatCount="indefinite"/><animate attributeName="r" values="160;176;144;168;160" dur="22s" repeatCount="indefinite"/></circle></svg>');
+  opacity: 0.8;
+  z-index: 1;
 }
 
 .hero-content {
